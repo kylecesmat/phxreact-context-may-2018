@@ -1,0 +1,38 @@
+import * as React from 'react';
+
+const { Provider, Consumer } = React.createContext(
+  // optional initial value
+);
+
+class Layout extends React.Component {
+  state = { color: 'Aqua' };
+
+  render() {
+    return (
+      <Provider value={this.state}>
+        {this.props.children}
+      </Provider>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <Consumer>
+          {({ color }) =>
+            <h1>
+              {`The Current Color is ${color}`}
+            </h1>
+          }
+        </Consumer>
+      </Layout>
+    );
+  }
+}
+
+
+
+
+

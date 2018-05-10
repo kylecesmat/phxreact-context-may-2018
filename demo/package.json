@@ -1,0 +1,23 @@
+{
+  "name": "phx-react-context",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-cheers": "^0.1.0",
+    "react-dom": "^16.3.2",
+    "react-fast-compare": "^1.0.0",
+    "react-scripts": "1.1.4",
+    "reset.css": "^2.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "eslint-plugin-flowtype": "^2.46.3",
+    "flow-bin": "^0.71.0"
+  }
+}

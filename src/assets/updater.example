@@ -1,0 +1,50 @@
+import * as React from 'react';
+
+const { Provider, Consumer } = React.createContext(
+  // optional initial value
+);
+
+class Layout extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      color: 'Aqua'
+      update: this.updateColor
+    };
+  }
+
+  updateColor = color => this.setState({ color });
+
+  render() {
+    return (
+      <Provider value={this.state}>
+        {this.props.children}
+      </Provider>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <Consumer>
+          {({ color, update }) =>
+            <h1>
+              {`The Current Color is ${color}`}
+            </h1>
+            <button onClick={() => update('SaddleBrown')}>
+              Change Color
+            </button>
+          }
+        </Consumer>
+      </Layout>
+    );
+  }
+}
+
+
+
+
+
